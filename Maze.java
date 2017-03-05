@@ -139,7 +139,6 @@ class MazeSolver
 	//recursive reduction
 	else {
 	    maze[x][y] = VISITED_PATH;
-	    maze[x][y] = HERO;
 	    System.out.println( this );
          
 	    /*======================================
@@ -156,8 +155,7 @@ class MazeSolver
 
 
 	    //If made it this far, path did not lead to exit, so back up.
-	    // (Overwrite space in maze with a .)
-	    maze[x][y] = VISITED_PATH;
+	    maze[x][y] = PATH;
 
 	    System.out.println( this ); //refresh screen
 	}
@@ -185,7 +183,8 @@ public class Maze
 
 	    //drop hero into the maze (coords must be on path)
 	    //comment next line out when ready to randomize startpos
-	    ms.solve( 4, 3 ); 
+	    ms.solve( 4, 3 );
+	    System.out.println( ms );
 
 	    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	    //drop our hero into maze at random location on path
