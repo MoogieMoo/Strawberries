@@ -183,10 +183,8 @@ public class Maze
 
 	    //drop hero into the maze (coords must be on path)
 	    //comment next line out when ready to randomize startpos
-	    ms.solve( 4, 3 );
-	    System.out.println( ms );
-
-	    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	    //ms.solve( 4, 3 );   
+	   
 	    //drop our hero into maze at random location on path
 	    //the Tim Diep way:
 	    Random r = new Random();
@@ -197,7 +195,9 @@ public class Maze
 		startY = r.nextInt( 25 );
 	    }
 	    ms.solve( startX, startY );
-	    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+	    System.out.println( ms );
+	    
 	} catch( Exception e ) { 
 	    System.out.println( "Error reading input file." );
 	    System.out.println( "Usage: java Maze <filename>" ); 
