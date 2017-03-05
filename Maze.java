@@ -139,6 +139,7 @@ class MazeSolver
 		//recursive reduction
 		else {
 			maze[x][y] = HERO;
+			delay(50);
 		    maze[x][y] = VISITED_PATH;
 		    System.out.println( this );
 
