@@ -136,24 +136,22 @@ class MazeSolver
 	else if ( maze[x][y] == VISITED_PATH ) {
 	    return;
 	}
-		//recursive reduction
-		else {
-			maze[x][y] = HERO;
-			delay(50);
-		    maze[x][y] = VISITED_PATH;
-		    System.out.println( this );
-
-		    /*======================================
-		      Recursively try to find the exit from 
-		      each of the HERO(@)'s available moves.
-		      . a .
-		      b @ d
-		      . c .
-		      ======================================*/
-		    solve( x, y + 1 ); // a
-		    solve( x - 1, y ); // b
-		    solve( x, y - 1 ); // c
-		    solve( x + 1, y ); // d
+	//recursive reduction
+	else {
+	    maze[x][y] = VISITED_PATH;
+	    System.out.println( this );
+         
+	    /*======================================
+	      Recursively try to find the exit from 
+	      each of the HERO(@)'s available moves.
+	      . a .
+	      b @ d
+	      . c .
+	      ======================================*/
+	    solve( x, y + 1 ); // a
+	    solve( x - 1, y ); // b
+	    solve( x, y - 1 ); // c
+	    solve( x + 1, y ); // d
 
 
 	    //If made it this far, path did not lead to exit, so back up.
